@@ -65,10 +65,7 @@ class Cli(cmd.Cmd):
         exit()
 
     def _complete(self, text, line, begidx, endidx, cmddict=None):
-        
-        # with open('/Users/yangbo/Desktop/log.txt','w+') as f:
-        #     f.write(f"line:{line}")
-        #     f.close()
+        """自己写的用于命令行补全的函数"""
         ret_list = []  #用来收集返回的值
         if begidx == endidx:  #如果这两个值相等，则说明遇到了空格，且begidx就是空格的位置
             index = line.find('=') #如果是关键字参数，那么就在上一个容器中返回补全值
